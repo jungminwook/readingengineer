@@ -1,5 +1,6 @@
 Readingengineer::Application.routes.draw do
   root "pages#home"
+  get "about" => "pages#about"
   get "reading" => "pages#reading"
   get "engineering" => "pages#engineering"
   get "others" => "pages#others"
