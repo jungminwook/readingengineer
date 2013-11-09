@@ -77,4 +77,9 @@ Readingengineer::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Required for Heroku
+  # This has to be modified when I get my own domain name
+  config.action_mailer.default_url_options = { :host => 'readingengineer.herokuapp.com' }
+
 end

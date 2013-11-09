@@ -1,24 +1,22 @@
+/* This is for fonts */
 @import url(http://fonts.googleapis.com/css?family=Flamenco);
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-
 $font-family-sans-serif:			Flamenco, 'Nanum Pen Script', serif;
+
+/* This is for nav-bar */
+$navbar-default-bg:									#372116;
+$navbar-border-radius:							0;
+$grid-float-breakpoint:							10;
 
 /* This is for reading engineer */
 $brand-primary:											white;
 $navbar-default-brand-color:				white;
 $navbar-default-brand-hover-color:	white;
 
-$grid-float-breakpoint:							100;
-
-$link-color:												#372116;
-$link-hover-color:									#372116;
+/* This is for dropdown menu */
 $navbar-default-link-color:					white;
 $navbar-default-link-hover-color:		white;
-$navbar-default-link-active-color:	#372116;
 
-$navbar-default-bg:									#372116;
-$navbar-border-radius:							0;
 
 @import 'bootstrap';
 
@@ -32,10 +30,8 @@ $navbar-border-radius:							0;
 
 .navbar-brand {
 	font-weight:								bold;
-	align: center;	
 }
 
 .navbar-category {
 	font-weight:								bold;
-	font-color:									black;
 }
