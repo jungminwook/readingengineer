@@ -21,10 +21,16 @@
       </ul>
       <ul class="nav navbar-nav">
       <% if user_signed_in? %>        
-        <li class="active"><%= link_to "click here to log out", new_user_session_path, class: "navbar-category" %></li>
+        <li class="active">
+          <%= link_to "click here to log out", destroy_user_session_path, method: :delete, class: "navbar-category" %>
+        </li>
       <% else %> 
-        <li class="active"><%= link_to "click here to log in", new_user_session_path, class: "navbar-category" %></li>
-        <li class="active"><%= link_to "sign up if you want to access more", new_user_registration_path, class: "navbar-category" %></li>
+        <li class="active">
+          <%= link_to "click here to log in", new_user_session_path, class: "navbar-category" %>
+        </li>
+        <li class="active">
+          <%= link_to "sign up if you want to access more", new_user_registration_path, class: "navbar-category" %>
+        </li>
       <% end %>
     </ul>
     </div><!-- /.navbar-collapse -->
