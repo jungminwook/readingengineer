@@ -1,48 +1,48 @@
 <nav class="navbar navbar-default" role="navigation">
 
   <div class="container">  
-  <div class="row">
-  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-8">
 
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <%= link_to "reading engineer", root_path, class: "navbar-brand" %> 
-    </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "reading engineer", root_path, class: "navbar-brand" %> 
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "about me", about_path, class: "navbar-categroy" %></li>
-        <li><%= link_to "reading", reading_path, class: "navbar-categroy" %></li>
-        <li><%= link_to "engineering", engineering_path, class: "navbar-categroy" %><li>
-        <li><%= link_to "others", others_path, class: "navbar-categroy" %></li>
-      </ul>
-      <ul class="nav navbar-nav">
-      <% if user_signed_in? %>        
-        <li class="active">
-          <%= link_to "click here to log out", destroy_user_session_path, method: :delete, class: "navbar-category" %>
-        </li>
-        <li class="active">
-          <%= link_to "account settings", edit_user_registration_path, class: "navbar-category" %>
-        </li>
-      <% else %> 
-        <li class="active">
-          <%= link_to "click here to log in", new_user_session_path, class: "navbar-category" %>
-        </li>
-        <li class="active">
-          <%= link_to "sign up if you want to access more", new_user_registration_path, class: "navbar-category" %>
-        </li>
-      <% end %>
-    </ul>
-    </div><!-- /.navbar-collapse -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "about me", about_path, class: "navbar-categroy" %></li>
+            <li><%= link_to "reading", reading_path, class: "navbar-categroy" %></li>
+            <li><%= link_to "engineering", engineering_path, class: "navbar-categroy" %><li>
+            <li><%= link_to "others", others_path, class: "navbar-categroy" %></li>
+          </ul>
+          <ul class="nav navbar-nav">
+          <% if user_signed_in? %>        
+            <li class="active">
+              <%= link_to "click here to log out", destroy_user_session_path, method: :delete, class: "navbar-category" %>
+            </li>
+            <li class="active">
+              <%= link_to "account settings", edit_user_registration_path, class: "navbar-category" %>
+            </li>
+          <% else %> 
+            <li class="active">
+              <%= link_to "click here to log in", new_user_session_path, class: "navbar-category" %>
+            </li>
+            <li class="active">
+              <%= link_to "sign up if you want to access more", new_user_registration_path, class: "navbar-category" %>
+            </li>
+          <% end %>
+        </ul>
+        </div><!-- /.navbar-collapse -->
  
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </nav>

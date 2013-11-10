@@ -3,6 +3,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
 $font-family-sans-serif:			Flamenco, 'Nanum Pen Script', serif;
 
+/* This is for layout setting */
 $grid-gutter-width:									20px;
 $navbar-padding-horizontal:					0px;
 
@@ -27,6 +28,8 @@ $btn-primary-bg:										#372116;
 
 $thumbnail-padding:									10px;
 $thumbnail-caption-padding:					10px;
+
+$body-bg:														#FEFFFB;
 
 @import 'bootstrap';
 
