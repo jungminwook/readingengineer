@@ -21,13 +21,18 @@ $navbar-default-link-active-color: 	#FF837A; /* pink */
 
 $btn-primary-color:									#FF837A; /* pink */
 $btn-primary-bg:										#372116;
-$btn-default-color:									green;
-$btn-default-bg:										yellow;
+
+$thumbnail-padding:									10px;
+$thumbnail-caption-padding:					10px;
 
 @import 'bootstrap';
 
 .penscript {
 	font-size: 22px;
+}
+
+.penscript-title {
+	font-size: 36px;
 }
 
 .center {
