@@ -1,6 +1,6 @@
 /* This is for fonts */
 @import url(http://fonts.googleapis.com/css?family=Flamenco);
-@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+/*@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);*/
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 $font-family-sans-serif:			Flamenco, 'Nanum Gothic', serif;
 
@@ -37,11 +37,13 @@ $body-bg:														#FFFAEE; /*#FEFFFA;*/
 body { padding-top: 70px; }
 
 .penscript {
-	font-size: 14px;
+	font-size: 									14px;
+	font-weight:								bold;
 }
 
 .penscript-title {
-	font-size: 36px;
+	font-size: 									20px;
+	font-weight:								bold;
 }
 
 .center {
