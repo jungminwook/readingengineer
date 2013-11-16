@@ -15,17 +15,10 @@
   <div class="panel-footer">
   	좋아요
   </div>
+
 </div>
 
-<p>
-  <div class="page-header">
-  	<h1><%= @journal.title %> <small><%= l @journal.created_at, format: :short %></small></h1>
-  	<p></p>
-	</div>
-
-  	<%= @journal.body %>
-	</div>
-</p>
-
-<%= link_to 'Edit', edit_journal_path(@journal) %> |
-<%= link_to 'Back', journals_path %>
+<% if @journal.user_id == current_user.id %>
+	<%= link_to 'Edit', edit_journal_path(@journal), class: "btn btn-warning" %>
+<% end %>
+<%= link_to 'Back', journals_path, class: "btn btn-primary"  %>
