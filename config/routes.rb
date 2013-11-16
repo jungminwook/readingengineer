@@ -2,7 +2,7 @@ Readingengineer::Application.routes.draw do
   resources :journals
 
   devise_for :users
-  root "pages#home"
+  root "journals#index"
   get "about" => "pages#about"
   get "reading" => "pages#reading"
   get "engineering" => "pages#engineering"
