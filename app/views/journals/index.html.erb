@@ -15,8 +15,10 @@
       <tr>
         <td><%= journal.body %></td>
         <td><%= link_to 'Show', journal %></td>
-        <td><%= link_to 'Edit', edit_journal_path(journal) %></td>
-        <td><%= link_to 'Destroy', journal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if journal.user == current_user %>
+          <td><%= link_to 'Edit', edit_journal_path(journal) %></td>
+          <td><%= link_to 'Destroy', journal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Journal', new_journal_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Journal', new_journal_path %>
+<% end %>

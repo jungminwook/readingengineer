@@ -1,5 +1,8 @@
 class JournalsController < ApplicationController
   before_action :set_journal, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+
 
   def index
     @journals = Journal.all
@@ -9,14 +12,14 @@ class JournalsController < ApplicationController
   end
 
   def new
-    @journal = Journal.new
+    @journal = current_user.journals.build
   end
 
   def edit
   end
 
   def create
-    @journal = Journal.new(journal_params)
+    @journal = current_user.journals.build(journal_params)
     if @journal.save
       redirect_to @journal, notice: 'Journal was successfully created.'
     else
@@ -43,8 +46,13 @@ class JournalsController < ApplicationController
       @journal = Journal.find(params[:id])
     end
 
+    def correct_user
+      @journal = current_user.journals.find_by(id: params[:id])
+      redirect_to journals_path, notice: "Not authorized to edit this" if @journal.nil?
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def journal_params
-      params.require(:journal).permit(:body)
+      params.require(:journal).permit(:title, :body)
     end
 end

@@ -1,7 +1,8 @@
 /* This is for fonts */
 @import url(http://fonts.googleapis.com/css?family=Flamenco);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-$font-family-sans-serif:			Flamenco, 'Nanum Pen Script', serif;
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+$font-family-sans-serif:			Flamenco, 'Nanum Gothic', serif;
 
 /* This is for layout setting */
 $grid-gutter-width:									20px;
@@ -29,12 +30,14 @@ $btn-primary-bg:										#372116;
 $thumbnail-padding:									10px;
 $thumbnail-caption-padding:					10px;
 
-$body-bg:														#FEFFFB;
+$body-bg:														#FEFFFA;
 
 @import 'bootstrap';
 
+body { padding-top: 70px; }
+
 .penscript {
-	font-size: 22px;
+	font-size: 14px;
 }
 
 .penscript-title {
