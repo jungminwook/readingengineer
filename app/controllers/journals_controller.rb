@@ -46,10 +46,10 @@ class JournalsController < ApplicationController
       @journal = Journal.find(params[:id])
     end
 
-  def correct_user
-    @journal = current_user.journals.find_by(id: params[:id])
-    redirect_to journals_path, notice: "Not authorized to edit this" if @journal.nil?
-  end
+    def correct_user
+      @journal = current_user.journals.find_by(id: params[:id])
+      redirect_to journals_path, notice: "Not authorized to edit this" if @journal.nil?
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def journal_params
