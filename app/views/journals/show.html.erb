@@ -1,11 +1,28 @@
 <p id="notice"><%= notice %></p>
 
+<div class="panel panel-default">
+  
+  <div class="panel-heading">
+    <div class="panel-title penscript-title"><%= @journal.title %> <small><%= l @journal.created_at, format: :short %></small></div>
+  </div>
+  
+  <div class="panel-body">
+  	  <div class="penscript">
+  			<%= @journal.body %>
+  		</div>
+  </div>
+  
+  <div class="panel-footer">
+  	좋아요
+  </div>
+</div>
+
 <p>
   <div class="page-header">
   	<h1><%= @journal.title %> <small><%= l @journal.created_at, format: :short %></small></h1>
   	<p></p>
 	</div>
-  <div class="penscript">
+
   	<%= @journal.body %>
 	</div>
 </p>

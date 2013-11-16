@@ -25,12 +25,17 @@ $navbar-default-link-hover-color:		white;
 $navbar-default-link-active-color: 	#FF837A; /* pink */
 
 $btn-primary-color:									#FF837A; /* pink */
-$btn-primary-bg:										#372116;
+$btn-primary-bg:										#372116; /* chocolate */
 
 $thumbnail-padding:									10px;
 $thumbnail-caption-padding:					10px;
 
-$body-bg:														#FFFAEE; /*#FEFFFA;*/
+$body-bg:														white; /*#FFFAEE;*/ /*#FEFFFA;*/
+
+$panel-border-radius:								4px;
+$panel-default-heading-bg:					#F5F5F5; 
+$panel-footer-bg:										#F5F5F5; 
+$line-height-base:									2.2;
 
 @import 'bootstrap';
 
