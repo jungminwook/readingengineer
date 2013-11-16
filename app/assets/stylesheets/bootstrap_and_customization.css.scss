@@ -38,6 +38,13 @@ $panel-default-heading-bg:					#FEFFFA; /*#F5F5F5;*/
 $panel-footer-bg:										#FEFFFA; /*#F5F5F5;*/ 
 $line-height-base:									2.2;
 
+$btn-default-color:									#372116; /* chocolate */
+$btn-default-bg:										#FEFFFA; 
+$btn-default-border:								#FF837A; /* pink */
+$btn-default-font-weight:										bold;
+$btn-success-color:									red;
+$btn-success-bg:										blue;
+
 @import 'bootstrap';
 
 body { padding-top: 70px; }
